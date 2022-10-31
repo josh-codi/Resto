@@ -1,0 +1,7 @@
+.mealDetail .banner{
+    display: flex;
+}
+.mealDetail .banner .foodImg{
+    margin: 1rem;
+    width: 70%;
+}

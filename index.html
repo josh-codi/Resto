@@ -23,7 +23,6 @@
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
 </head>
 
 <body>
@@ -38,19 +37,19 @@
 
             <div class="navContainer">
                 <aside class="navList">
-                    <a href="./index.html">
+                    <a class="homeNav">
                         <li class="nav">
                             <small class="fa fa-house"></small>
                             <small>Home</small>
                         </li>
                     </a>
-                    <a class="orderNav">
+                    <a href="./assets/orders.html" class="orderNav">
                         <li class="nav">
                             <small class="fa fa-sort"></small>
                             <small>Orders</small>
                         </li>
                     </a>
-                    <a href="./assets/menu.html">
+                    <a href="./assets/menu.html" class="menuNav">
                         <li class="nav">
                             <small class="fa fa-bowl-food"></small>
                             <small>Menu</small>
@@ -81,25 +80,86 @@
                     <h2 class="username">Joshua Odame</h2>
                     <small class="todayDate">March, 23, 12:14 PM</small>
                 </aside>
+
                 <div style="display: flex;align-items: center;margin-right: 5px;">
                     <form class="search">
-                        <d5v class="searchBar">
+                        <div class="searchBar">
                             <input type="text">
-                        </d5v>
+                        </div>
                         <button class="searchBtn">
                             <i class="fa fa-search"></i>
                         </button>
                     </form>
-                    <aside style="display: flex;align-items: center;">
+
+                    <aside class="cartBtn" style="display: flex;align-items: center;">
                         <i class="fa fa-cart-shopping" style="font-size: 2rem;padding:0 0.5rem 0 1.5rem;"></i>
-                        <div style="display: flex;align-items: center;justify-content:center;border: 1px solid red;width: 25px; height: 25px;border-radius: 50%; border-radius: 50;" class="countCart">5</div>
+                        <div style="display: flex;align-items: center;justify-content:center;border: 1px solid red;width: 25px; height: 25px;border-radius: 50%; border-radius: 50;"
+                            class="countCart">5</div>
                     </aside>
+
+                    <div class="cart">
+                        <aside class="" style="cursor: pointer;display: flex;justify-content: space-between;align-items: center;padding: 0.2rem;background-color: azure;margin: 0 0 0.5rem 0;">
+                            <div style="display: flex;align-items: center;justify-content: flex-start;">
+                                <div class="foodImg" style="width: 30px;height: 30px;overflow: hidden; border-radius: 50%;margin:0 5px 0 0;">
+                                    <img src="./assets/img/meal1.jpg" alt="">
+                                </div>
+                                <div class="foodTitle" style="display: flex;flex-direction: column;">
+                                    <small style="margin: 0;padding: 0;">Jollof</small>
+                                    <small style="margin: 0;padding: 0;">12:25</small>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <b>Delete</b>
+                            </div>
+                        </aside>
+
+                        <aside class=""
+                            style="cursor: pointer;display: flex;justify-content: space-between;align-items: center;padding: 0.2rem;background-color: azure;margin: 0 0 0.5rem 0;">
+                            <div style="display: flex;align-items: center;justify-content: flex-start;">
+                                <div class="foodImg" style="width: 30px;height: 30px;overflow: hidden; border-radius: 50%;margin:0 5px 0 0;">
+                                    <img src="./assets/img/meal1.jpg" alt="">
+                                </div>
+                                <div class="foodTitle" style="display: flex;flex-direction: column;">
+                                    <small style="margin: 0;padding: 0;">Jollof</small>
+                                    <small style="margin: 0;padding: 0;">12:25</small>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <b>Delete</b>
+                            </div>
+                        </aside>
+
+                        <aside class=""
+                            style="cursor: pointer;display: flex;justify-content: space-between;align-items: center;padding: 0.2rem;background-color: azure;margin: 0 0 0.5rem 0;">
+                            <div style="display: flex;align-items: center;justify-content: flex-start;">
+                                <div class="foodImg" style="width: 30px;height: 30px;overflow: hidden; border-radius: 50%;margin:0 5px 0 0;">
+                                    <img src="./assets/img/meal1.jpg" alt="">
+                                </div>
+                                <div class="foodTitle" style="display: flex;flex-direction: column;">
+                                    <small style="margin: 0;padding: 0;">Jollof</small>
+                                    <small style="margin: 0;padding: 0;">12:25</small>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <b>Delete</b>
+                            </div>
+                        </aside>
+
+                        <aside class="" style="cursor: pointer;display: flex;justify-content: space-between;align-items: center;padding: 0.2rem;background-color: azure;margin: 0 0 0.5rem 0;">
+                            <h4 class="text-primary" style="text-align: center;width: 100%;font-weight: 600;">GHC 234</h4>
+                        </aside>
+
+                        <aside class="" style="display: flex;justify-content: space-between;align-items: center;padding: 0.4rem;background-color: azure;margin: 0 0 0.5rem 0;">
+                            <button class="btn btn-primary" style="width: 100%;">Place Order</button>
+                        </aside>
+                        <i class="closeCart fa fa-times" style="position: absolute;top: 0.7rem;left: 0.7rem; color: red; border: 1px solid red;width: 30px; height: 30px; border-radius: 50%;display: flex;justify-content: center;align-items: center;background-color: white;box-shadow: 0px 0px 5px -1px gray;cursor: pointer;"></i>
+                    </div>
                 </div>
             </div>
-            
+
 
             <div class="mainPage">
-                <div class="container1">
+                <div class="container1 homeContainer1">
                     <section class="sec1">
                         <div class="banner" style="position: relative;">
                             <aside class="bannerImg">
@@ -138,151 +198,59 @@
                     <section class="sec2">
                         <h3>Available Meals</h3>
                         <div class="availableMeals">
-                            <aside class="item">
+                            <aside class="foodItem item">
                                 <!-- <div class="itm-inner"> -->
                                 <img src="./assets/img/meal.jpg" alt="">
                                 <!-- </div> -->
                                 <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy" id="">Buy / Order</button>
+                                    <small
+                                        style="width: 90%; text-align: center;font-size: 1.6rem;font-weight: 600;">Jollof
+                                        with Chicken</small>
+                                    <h1>GHC 230</h1>
+                                    <button class="btn btn-view" id=""><a href="./assets/mealDetail.html" style="color: white;">View Details</a></button>
+                                    <button class="btn btn-buy" price="200" name="Jollof with chicken" id="">Buy /
+                                        Order</button>
+                                </div>
+                            </aside>
+                            <aside class="item">
+                                <!-- <div class="itm-inner"> -->
+                                <img src="./assets/img/meal1.jpg" alt="">
+                                <!-- </div> -->
+                                <div class="subDet">
+                                    <small
+                                        style="width: 90%; text-align: center;font-size: 1.6rem;font-weight: 600;">Jollof
+                                        with Chicken</small>
+
+                                    <h1>GHC 230</h1>
+                                    <button class="btn btn-view" id=""><a href="./assets/mealDetail.html" style="color: white;">View Details</a></button>
+                                    <button class="btn btn-buy" price="234" name="Jollof with chicken" id="">Buy /
+                                        Order</button>
 
                                 </div>
                             </aside>
                             <aside class="item">
                                 <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal1.jpg" alt="">
+                                <img src="./assets/img/meal2.jpg" alt="">
                                 <!-- </div> -->
                                 <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
+                                    <small
+                                        style="width: 90%; text-align: center;font-size: 1.6rem;font-weight: 600;">Jollof
+                                        with Chicken</small>
 
+                                    <h1>GHC 230</h1>
+                                    <button class="btn btn-view" id=""><a href="./assets/mealDetail.html" style="color: white;">View Details</a></button>
+                                    <button class="btn btn-buy" price="234" name="Jollof with chicken" id="">Buy /
+                                        Order</button>
                                 </div>
                             </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal2.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal3.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal1.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal2.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal1.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal1.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal2.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal3.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal1.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
-                            <aside class="item">
-                                <!-- <div class="itm-inner"> -->
-                                <img src="./assets/img/meal2.jpg" alt="">
-                                <!-- </div> -->
-                                <div class="subDet">
-                                    <h1>GHC 230</h1><br>
-                                    <button class="btn btn-view">View Details</button>
-                                    <button class="btn btn-buy">Buy / Order</button>
-                                </div>
-                            </aside>
+                            
+
                         </div>
                     </section>
                 </div>
+
+
+
 
                 <div class="container2">
                     <dv class="placeOrder">
@@ -290,12 +258,10 @@
                         <form class="placeOrderForm">
                             <!-- Name input -->
                             <div class="form-group allSelected">
-                                <small><i class="fa fa-circle"></i> Jollf</small>
-                                <small><i class="fa fa-circle"></i> Jollf</small>
-                                <small><i class="fa fa-circle"></i> Jollf</small>
-                                <small><i class="fa fa-circle"></i> Jollf</small>
-                                <small><i class="fa fa-circle"></i> Jollf</small>
-                                <small><i class="fa fa-circle"></i> Jollf</small>
+                                <small>
+                                    <i id="234" class="fa fa-times removeFood"></i>
+                                    <b>Jollof with chicken</b>
+                                </small>
                             </div>
 
                             <div class="form-group">
@@ -303,16 +269,16 @@
                             </div>
 
                             <div class="form-group">
-                                <h1 class="total text-primary">$204.87</h1>
+                                <h1 class="total text-primary" id="totalPrice">$0</h1>
                             </div>
 
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary">Place Order</button>
+                            <button type="submit" class="btn btn-primary placeOrderBtn">Place Order</button>
                         </form>
                     </dv>
                     <div class="activeOrders">
                         <div class="headen">
-                            <h4 class="text-primary">Recent Orders</h4>
+                            <h4 class="text-primary">Active Orders</h4>
                         </div>
                         <section class="sec1">
                             <div class="left">
@@ -325,77 +291,7 @@
                             </div>
                         </section>
 
-                        <section class="sec2">
-                            <div class="orderItem">
-                                <aside>
-                                    <div class="foodImg">
-                                        <img src="./assets/img/meal1.jpg" alt="">
-                                    </div>
-                                    <div class="foodTitle">
-                                        <small>Jollof</small><br>
-                                        <small>12:25</small>
-                                    </div>
-                                </aside>
-                                <div class="price">
-                                    <b>$20.00</b>
-                                </div>
-                            </div>
-                            <div class="orderItem">
-                                <aside>
-                                    <div class="foodImg">
-                                        <img src="./assets/img/meal1.jpg" alt="">
-                                    </div>
-                                    <div class="foodTitle">
-                                        <small>Jollof</small><br>
-                                        <small>12:25</small>
-                                    </div>
-                                </aside>
-                                <div class="price">
-                                    <b>$20.00</b>
-                                </div>
-                            </div>
-                            <div class="orderItem">
-                                <aside>
-                                    <div class="foodImg">
-                                        <img src="./assets/img/meal1.jpg" alt="">
-                                    </div>
-                                    <div class="foodTitle">
-                                        <small>Jollof</small><br>
-                                        <small>12:25</small>
-                                    </div>
-                                </aside>
-                                <div class="price">
-                                    <b>$20.00</b>
-                                </div>
-                            </div>
-                            <div class="orderItem">
-                                <aside>
-                                    <div class="foodImg">
-                                        <img src="./assets/img/meal1.jpg" alt="">
-                                    </div>
-                                    <div class="foodTitle">
-                                        <small>Jollof</small><br>
-                                        <small>12:25</small>
-                                    </div>
-                                </aside>
-                                <div class="price">
-                                    <b>$20.00</b>
-                                </div>
-                            </div>
-                            <div class="orderItem">
-                                <aside>
-                                    <div class="foodImg">
-                                        <img src="./assets/img/meal1.jpg" alt="">
-                                    </div>
-                                    <div class="foodTitle">
-                                        <small>Jollof</small><br>
-                                        <small>12:25</small>
-                                    </div>
-                                </aside>
-                                <div class="price">
-                                    <b>$20.00</b>
-                                </div>
-                            </div>
+                        <section class="sec2" id="recentOrders">
                             <div class="orderItem">
                                 <aside>
                                     <div class="foodImg">
@@ -411,9 +307,7 @@
                                 </div>
                             </div>
 
-                            <div class="orderItem">
-                                <i>Your orders appears here ...</i>
-                            </div>
+
                         </section>
                     </div>
 
@@ -421,124 +315,8 @@
                 </div>
 
             </div>
-
-
         </section>
     </div>
-
-    <div class="ordersContainer">
-        <div class="ordersInner">
-
-            <section class="ordersHead">
-                <h3><strong>Resto Orders</strong></h3>
-
-                <!-- <form class="searchOrder">
-                    <input type="text">
-                    <button><i class="fa fa-search"></i></button>
-                </form> -->
-            </section>
-
-            <section class="ordersBody">
-                <div class="titles">
-                    <small class="si">SI No</small>
-                    <small class="titleHead meal">Meal</small>
-                    <small class="titleHead">Price</small>
-                    <small class="titleHead">Date</small>
-                    <small class="titleHead">Delivered</small>
-                </div>
-                <div class="orderItem">
-                    <small class="si">1</small>
-                    <small class="order meal">
-                        <div class="mealImg">
-                            <img src="./assets/img/meal.jpg" alt="">
-                        </div>
-                        <strong>Jollof</strong>
-                    </small>
-                    <small class="order">$23.34</small>
-                    <small class="order">22/12/22, 12:23</small>
-                    <small class="order">true</small>
-                </div>
-                <div class="orderItem">
-                    <small class="si">1</small>
-                    <small class="order meal">
-                        <div class="mealImg">
-                            <img src="./assets/img/meal.jpg" alt="">
-                        </div>
-                        <strong>Jollof</strong>
-                    </small>
-                    <small class="order">$23.34</small>
-                    <small class="order">22/12/22, 12:23</small>
-                    <small class="order">true</small>
-                </div>
-                <div class="orderItem">
-                    <small class="si">1</small>
-                    <small class="order meal">
-                        <div class="mealImg">
-                            <img src="./assets/img/meal.jpg" alt="">
-                        </div>
-                        <strong>Jollof</strong>
-                    </small>
-                    <small class="order">$23.34</small>
-                    <small class="order">22/12/22, 12:23</small>
-                    <small class="order">true</small>
-                </div>
-                <div class="orderItem">
-                    <small class="si">1</small>
-                    <small class="order meal">
-                        <div class="mealImg">
-                            <img src="./assets/img/meal.jpg" alt="">
-                        </div>
-                        <strong>Jollof</strong>
-                    </small>
-                    <small class="order">$23.34</small>
-                    <small class="order">22/12/22, 12:23</small>
-                    <small class="order">true</small>
-                </div>
-                <div class="orderItem">
-                    <small class="si">1</small>
-                    <small class="order meal">
-                        <div class="mealImg">
-                            <img src="./assets/img/meal.jpg" alt="">
-                        </div>
-                        <strong>Jollof</strong>
-                    </small>
-                    <small class="order">$23.34</small>
-                    <small class="order">22/12/22, 12:23</small>
-                    <small class="order">true</small>
-                </div>
-                <div class="orderItem">
-                    <small class="si">1</small>
-                    <small class="order meal">
-                        <div class="mealImg">
-                            <img src="./assets/img/meal.jpg" alt="">
-                        </div>
-                        <strong>Jollof</strong>
-                    </small>
-                    <small class="order">$23.34</small>
-                    <small class="order">22/12/22, 12:23</small>
-                    <small class="order">true</small>
-                </div>
-                <div class="orderItem">
-                    <small class="si">1</small>
-                    <small class="order meal">
-                        <div class="mealImg">
-                            <img src="./assets/img/meal.jpg" alt="">
-                        </div>
-                        <strong>Jollof</strong>
-                    </small>
-                    <small class="order">$23.34</small>
-                    <small class="order">22/12/22, 12:23</small>
-                    <small class="order">true</small>
-                </div>
-
-            </section>
-
-        </div>
-        <div class="closeOrderPopUp">
-            <i class="fa fa-times"></i>
-        </div>
-    </div>
-
 
     <script src="./assets//scripts/uiInteractions.js"></script>
     <script src="./assets/scripts/main.js"></script>

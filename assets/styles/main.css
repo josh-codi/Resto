@@ -372,7 +372,8 @@ img {
     justify-content: center;
     align-items: center;
     color: white;
-    opacity: 0;
+    /* opacity: 0; */
+
 }
 
 .container1 .subDet h1{
@@ -395,7 +396,8 @@ img {
 
 .container1 .sec2 .item .subDet:hover {
     transition: 1s;
-    opacity: 1;
+    /* opacity: 1;
+    pointer-events: visible; */
 }
 
 .item .subDet h1 {
@@ -457,7 +459,13 @@ img {
 }
 
 .allSelected i {
-    color: var(--light-primary)
+    color: red;
+    margin: 0.3rem;
+    cursor: pointer;
+}
+.allSelected small{
+    display: flex;
+    justify-content: flex-start;
 }
 
 .container2 .placeOrderForm .total {
@@ -543,4 +551,33 @@ img {
     border-radius: 50%;
     overflow: hidden;
     margin: 0.5rem;
+}
+
+.mainBody .header .cart {
+    animation-name: cartAnim !important;
+    animation-duration: 1s !important;
+    animation-delay: 0s !important;
+
+    position: absolute;
+    z-index: 10;
+    width: 350px;
+    right: 1rem;
+    top: 8rem;
+    box-shadow: 0px 0px 7px -1px gray;
+    max-height: 400px;
+    padding: 1rem;
+    border-radius: 10px;
+    background: white;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+@keyframes cartAnim {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
 }
