@@ -47,6 +47,46 @@ h6 {
     align-items: center;
     justify-content: space-between;
 }
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.header .fa-bars, .header .fa-times{
+    display: none;
+}
+.header .fa-times{
+    color: red;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 500px) {
+    .header .fa-bars, .header .fa-times{
+        display: block;
+        margin: 0.5rem;
+    }
+    .sideBar {
+        display: none;
+    }
+
+    .showSidebar {
+        display: flex !important;
+        animation-name: sidebar;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes sidebar{
+        from{
+            display: flex !important;
+            transform: translateX(-100%);
+        }to{
+            transform: translateX(0%);
+        }
+    }
+}
+
 
 .sideBar .profileImg {
     /* border: 1px solid red; */
@@ -123,8 +163,23 @@ h6 {
 }
 
 .header .username_date {
-    /* border: 1px solid black; */
     padding: 0 0 0 0.7rem;
+}
+
+@media only screen and (max-width: 777px) {
+    .header .username_date .username {
+        font-size: 1.4rem !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header .username_date .todayDate {
+        font-size: 0.9rem !important;
+    }
+
+    .header .search {
+        display: none !important;
+    }
 }
 
 .header .search {
@@ -232,12 +287,14 @@ h6 {
     height: 100%;
     /* border-radius: 30px; */
 }
-.bannerContent *{
+
+.bannerContent * {
     color: white;
     font-weight: 500;
     letter-spacing: 2px;
 }
-.bannerContent h1{
+
+.bannerContent h1 {
     font-size: 4rem !important;
     font-weight: 900;
 }
@@ -376,7 +433,7 @@ img {
 
 }
 
-.container1 .subDet h1{
+.container1 .subDet h1 {
     font-weight: 600;
     font-size: 1.2rem;
 }
@@ -463,7 +520,8 @@ img {
     margin: 0.3rem;
     cursor: pointer;
 }
-.allSelected small{
+
+.allSelected small {
     display: flex;
     justify-content: flex-start;
 }
@@ -574,10 +632,12 @@ img {
 }
 
 @keyframes cartAnim {
-    from{
+    from {
         transform: translateY(-100%);
         opacity: 0;
-    }to{
+    }
+
+    to {
         opacity: 1;
     }
 }

@@ -200,3 +200,27 @@ cartBtn.addEventListener("click", () => toggleCart())
 closeCart.addEventListener("click", () => toggleCart())
 
 toggleCart();
+
+
+const bars = document.querySelector(".fa-bars");
+const sideBar = document.querySelector(".sideBar");
+let checkSidebar = false;
+function checkBar(){
+    if(!checkSidebar){
+        sideBar.classList.remove("showSidebar")
+        bars.classList.remove("fa-times")
+        if(!bars.classList.contains("fa-bars")){
+            bars.classList.add("fa-bars")
+        }
+    }else{
+        sideBar.classList.add("showSidebar")
+        bars.classList.add("fa-times")
+        if (bars.classList.contains("fa-bars")) {
+            bars.classList.remove("fa-bars")
+        }
+    }
+}
+bars.addEventListener("click",()=>{
+    checkSidebar = !checkSidebar;
+    checkBar();
+})

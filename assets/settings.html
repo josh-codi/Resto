@@ -79,10 +79,13 @@
         <section class="mainBody">
             <!-- Header section -->
             <div class="header">
-                <aside class="username_date">
-                    <h2 class="username">Joshua Odame</h2>
-                    <small class="todayDate"></small>
-                </aside>
+                <div class="flex">
+                    <i class="fa fa-bars"></i>
+                    <aside class="username_date">
+                        <h2 class="username">Joshua Odame</h2>
+                        <small class="todayDate">March, 23, 12:14 PM</small>
+                    </aside>
+                </div>
                 <div style="display: flex;align-items: center;margin-right: 5px;">
                     <form class="search">
                         <div class="searchBar">
@@ -92,13 +95,13 @@
                             <i class="fa fa-search"></i>
                         </button>
                     </form>
-                
+
                     <aside class="cartBtn" style="display: flex;align-items: center;">
                         <i class="fa fa-cart-shopping" style="font-size: 2rem;padding:0 0.5rem 0 1.5rem;"></i>
                         <div style="display: flex;align-items: center;justify-content:center;border: 1px solid red;width: 25px; height: 25px;border-radius: 50%; border-radius: 50;"
                             class="countCart">5</div>
                     </aside>
-                
+
                     <div class="cart">
                         <aside class=""
                             style="cursor: pointer;display: flex;justify-content: space-between;align-items: center;padding: 0.2rem;background-color: azure;margin: 0 0 0.5rem 0;">
@@ -116,7 +119,7 @@
                                 <b>Delete</b>
                             </div>
                         </aside>
-                
+
                         <aside class=""
                             style="cursor: pointer;display: flex;justify-content: space-between;align-items: center;padding: 0.2rem;background-color: azure;margin: 0 0 0.5rem 0;">
                             <div style="display: flex;align-items: center;justify-content: flex-start;">
@@ -133,7 +136,7 @@
                                 <b>Delete</b>
                             </div>
                         </aside>
-                
+
                         <aside class=""
                             style="cursor: pointer;display: flex;justify-content: space-between;align-items: center;padding: 0.2rem;background-color: azure;margin: 0 0 0.5rem 0;">
                             <div style="display: flex;align-items: center;justify-content: flex-start;">
@@ -150,12 +153,13 @@
                                 <b>Delete</b>
                             </div>
                         </aside>
-                
+
                         <aside class=""
                             style="cursor: pointer;display: flex;justify-content: space-between;align-items: center;padding: 0.2rem;background-color: azure;margin: 0 0 0.5rem 0;">
-                            <h4 class="text-primary" style="text-align: center;width: 100%;font-weight: 600;">GHC 234</h4>
+                            <h4 class="text-primary" style="text-align: center;width: 100%;font-weight: 600;">GHC 234
+                            </h4>
                         </aside>
-                
+
                         <aside class=""
                             style="display: flex;justify-content: space-between;align-items: center;padding: 0.4rem;background-color: azure;margin: 0 0 0.5rem 0;">
                             <button class="btn btn-primary" style="width: 100%;">Place Order</button>
@@ -181,7 +185,8 @@
                         <div class="content">
                             <small>Username</small><br>
                             <input type="text" placeholder="Username">
-                            <br><p></p>
+                            <br>
+                            <p></p>
 
                             <small>Password</small><br>
                             <input type="password" placeholder="Username">
@@ -197,7 +202,7 @@
                             <button type="submit" class="btn btn-primary">Save Changes</button>
                         </div>
 
-                        
+
                     </aside>
                 </div>
             </div>
@@ -205,7 +210,31 @@
 
         </section>
     </div>
+    <script>
 
+        const bars = document.querySelector(".fa-bars");
+        const sideBar = document.querySelector(".sideBar");
+        let checkSidebar = false;
+        function checkBar() {
+            if (!checkSidebar) {
+                sideBar.classList.remove("showSidebar")
+                bars.classList.remove("fa-times")
+                if (!bars.classList.contains("fa-bars")) {
+                    bars.classList.add("fa-bars")
+                }
+            } else {
+                sideBar.classList.add("showSidebar")
+                bars.classList.add("fa-times")
+                if (bars.classList.contains("fa-bars")) {
+                    bars.classList.remove("fa-bars")
+                }
+            }
+        }
+        bars.addEventListener("click", () => {
+            checkSidebar = !checkSidebar;
+            checkBar();
+        })
+    </script>
     <script src="../assets//scripts/uiInteractions.js"></script>
     <script src="../assets/scripts/settings.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

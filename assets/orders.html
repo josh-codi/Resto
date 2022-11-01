@@ -78,10 +78,13 @@
         <section class="mainBody">
             <!-- Header section -->
             <div class="header">
-                <aside class="username_date">
-                    <h2 class="username">Joshua Odame</h2>
-                    <small class="todayDate"></small>
-                </aside>
+                <div class="flex">
+                    <i class="fa fa-bars"></i>
+                    <aside class="username_date">
+                        <h2 class="username">Joshua Odame</h2>
+                        <small class="todayDate">March, 23, 12:14 PM</small>
+                    </aside>
+                </div>
                 <div style="display: flex;align-items: center;margin-right: 5px;">
                     <form class="search">
                         <div class="searchBar">
@@ -279,7 +282,31 @@
 
         </section>
     </div>
+    <script>
 
+        const bars = document.querySelector(".fa-bars");
+        const sideBar = document.querySelector(".sideBar");
+        let checkSidebar = false;
+        function checkBar() {
+            if (!checkSidebar) {
+                sideBar.classList.remove("showSidebar")
+                bars.classList.remove("fa-times")
+                if (!bars.classList.contains("fa-bars")) {
+                    bars.classList.add("fa-bars")
+                }
+            } else {
+                sideBar.classList.add("showSidebar")
+                bars.classList.add("fa-times")
+                if (bars.classList.contains("fa-bars")) {
+                    bars.classList.remove("fa-bars")
+                }
+            }
+        }
+        bars.addEventListener("click", () => {
+            checkSidebar = !checkSidebar;
+            checkBar();
+        })
+    </script>
     <script src="../assets//scripts/uiInteractions.js"></script>
     <script src="../assets/scripts/order.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
