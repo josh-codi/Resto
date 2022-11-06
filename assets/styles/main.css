@@ -532,11 +532,12 @@ img {
 }
 
 .container2 .placeOrderForm button {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
     margin: 0;
 
+}
+.v-flex{
+    display: flex;
+    flex-direction: column;
 }
 
 .container2 .activeOrders {
