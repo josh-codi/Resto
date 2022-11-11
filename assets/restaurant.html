@@ -30,12 +30,13 @@
     <p class="som"></p>
     <div class="mainContainer">
         <section class="sideBar">
-            <div class="profileImg">
+            <div class="sidebarInner">
+                <div class="profileImg">
                 <aside class="pImg">
                     <img src="./img/profile.jpeg" alt="">
                 </aside>
             </div>
-
+            <br><br><br>
             <div class="navContainer">
                 <aside class="navList">
                     <a href="../index.html" class="homeNav">
@@ -79,6 +80,8 @@
                 </aside>
                 <small>LOGOUT</small>
             </div>
+            </div>
+            
         </section>
 
         <section class="mainBody">
@@ -303,9 +306,33 @@
             </div>
         </section>
     </div>
+    <script>
 
+        const bars = document.querySelector(".fa-bars");
+        const sideBar = document.querySelector(".sideBar");
+        let checkSidebar = false;
+        function checkBar() {
+            if (!checkSidebar) {
+                sideBar.classList.remove("showSidebar")
+                bars.classList.remove("fa-times")
+                if (!bars.classList.contains("fa-bars")) {
+                    bars.classList.add("fa-bars")
+                }
+            } else {
+                sideBar.classList.add("showSidebar")
+                bars.classList.add("fa-times")
+                if (bars.classList.contains("fa-bars")) {
+                    bars.classList.remove("fa-bars")
+                }
+            }
+        }
+        bars.addEventListener("click", () => {
+            checkSidebar = !checkSidebar;
+            checkBar();
+        })
+    </script>
     <script src="./scripts/uiInteractions.js"></script>
-    <script src="./scripts/restaurant.js"></script>
+    <script src="../assets/scripts/restaurant.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
